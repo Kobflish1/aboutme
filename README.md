@@ -80,9 +80,6 @@
 ### 1. 🏛️ Protocol Titan — Institutional DeFi Infrastructure
 **[protocoltitan.com](https://protocoltitan.com)** · *Awarded $10,000 in AWS Credits*
 
-<table>
-<tr><td>
-
 #### Problem
 Decentralized finance (DeFi) suffers from a critical 2–6 second "Oracle Lag" between real-world event resolution and on-chain settlement, causing **$500M+ in annual price slippage** and preventing institutional market makers from operating efficiently.
 
@@ -110,15 +107,9 @@ Built a next-generation MEV-resistant infrastructure platform that eliminates Or
 - ✅ Created professional whitepaper and institutional-grade documentation
 - ✅ Implemented predictive ML models trained on unstructured DeFi governance text
 
-</td></tr>
-</table>
-
 ---
 
 ### 2. 📈 30-Minute ORB Algorithm — Consistently Profitable Nasdaq Trading System
-
-<table>
-<tr><td>
 
 #### Concept
 Designed and built an algorithmic trading system based on the **Opening Range Breakout (ORB)** strategy on the Nasdaq, using the first 30 minutes of market data to establish a directional bias.
@@ -156,15 +147,9 @@ Automated Exit (Target / Stop-Loss)
 - ✅ Robust edge maintained across different market conditions
 - ✅ Successfully integrated multiple independent confirmation filters
 
-</td></tr>
-</table>
-
 ---
 
 ### 3. 🎰 Prop Firm Model Reverse Engineering — Complete Mathematical Breakdown
-
-<table>
-<tr><td>
 
 #### Objective
 Reverse-engineered the **MyFundedFutures (MFF) 50K Rapid Plan** to discover that the prop firm's own rules create a structural mathematical edge — a high-volatility momentum strategy (the 30-minute ORB) combined with an asymmetric payout loop that flips the house math against them.
@@ -172,18 +157,19 @@ Reverse-engineered the **MyFundedFutures (MFF) 50K Rapid Plan** to discover that
 #### The Complete Pipeline — 3 Phases to Payout
 
 ```
-╔═════════════════════╗   ╔═════════════════════╗   ╔═════════════════════╗
-║  PHASE 1             ║   ║  PHASE 2             ║   ║  PHASE 3             ║
-║  EVALUATION          ║ → ║  INTRADAY DRAWDOWN   ║ → ║  SIM FUNDED          ║
-║                     ║   ║                     ║   ║                     ║
-║  Pay $119 eval fee  ║   ║  Build buffer with   ║   ║  Risk $2,000 max     ║
-║  Hit $3K target     ║   ║  intraday drawdown   ║   ║  Target 2RR = $4,000 ║
-║  $2K EOD drawdown   ║   ║  rules (stricter)    ║   ║  Min withdrawal $500 ║
-║  50% consistency    ║   ║                     ║   ║  Repeat until dead   ║
-║  Min 2 days         ║   ║                     ║   ║                     ║
-╚═════════════════════╝   ╚═════════════════════╝   ╚═════════════════════╝
-    Cost: $119               Cost: $0                 Payout: withdrawals
-    Risk: eval fee only      Risk: nothing (virtual)  until account dies
+╔══════════════════════╗     ╔══════════════════════╗     ╔══════════════════════╗
+║  PHASE 1             ║     ║  PHASE 2             ║     ║  PHASE 3             ║
+║  EVALUATION          ║────▶║  INTRADAY DRAWDOWN   ║────▶║  SIM FUNDED          ║
+╠══════════════════════╣     ╠══════════════════════╣     ╠══════════════════════╣
+║  Pay $119 eval fee   ║     ║  Build drawdown      ║     ║  Risk $2,000 max     ║
+║  Hit $3K target      ║     ║  buffer (stricter    ║     ║  Target 2RR = $4,000 ║
+║  $2K EOD drawdown    ║     ║  intraday rules)     ║     ║  Min withdrawal $500 ║
+║  50% consistency     ║     ║                      ║     ║  Repeat until dead   ║
+║  Minimum 2 days      ║     ║                      ║     ║                      ║
+╠══════════════════════╣     ╠══════════════════════╣     ╠══════════════════════╣
+║  Cost:  $119         ║     ║  Cost:  $0           ║     ║  Revenue: withdrawals║
+║  Risk:  eval fee     ║     ║  Risk:  nothing      ║     ║  until account dies  ║
+╚══════════════════════╝     ╚══════════════════════╝     ╚══════════════════════╝
 ```
 
 ---
@@ -368,15 +354,9 @@ The 85% of traders who fail:
 - Algorithmic strategy integration (30-min ORB → evaluation pipeline)
 - Game theory application to real financial structures
 
-</td></tr>
-</table>
-
 ---
 
 ### 4. 🤖 Polymarket Dual Arbitrage Bot
-
-<table>
-<tr><td>
 
 #### Concept
 Built an automated arbitrage bot for Polymarket (blockchain-based prediction market) that profits from **pricing inefficiencies where the sum of YES and NO share prices falls below $1.00**.
@@ -447,15 +427,9 @@ By buying **both** YES and NO simultaneously when their combined price is below 
 - Discovered the edge was **too thin after transaction costs** to be consistently profitable
 - **Key Insight:** Market makers keep YES + NO prices very tight to $1.00. The windows where the sum drops below $1.00 minus fees are rare and close within seconds, making gas costs the dominant factor
 
-</td></tr>
-</table>
-
 ---
 
 ### 5. ⚡ RICH Algorithm Blockchain Arbitrage Engine
-
-<table>
-<tr><td>
 
 #### Innovation
 Built a high-performance blockchain arbitrage system on the **Base Network (L2)** implementing the **RICH (Real-time Identification of negative Cycles for High-efficiency arbitrage)** algorithm — a novel framework achieving **32.69× faster** cycle detection compared to state-of-the-art methods.
@@ -512,15 +486,9 @@ Token Graph (DEX liquidity pools):
 - ❌ Did not achieve consistent profitability — competition from professional MEV bots with dedicated infrastructure
 - ✅ **Deep learning outcome:** Mastered graph algorithms, low-level CPU optimization (AVX-512), blockchain mempool dynamics, and DEX liquidity mechanics
 
-</td></tr>
-</table>
-
 ---
 
 ### 6. 💼 Visionary Vibe — B2B SaaS Platform for Italian Businesses
-
-<table>
-<tr><td>
 
 #### Product
 Built and launched a full SaaS platform in 2024 targeting **local Italian businesses**, providing professional digital products and services.
@@ -549,15 +517,9 @@ Built and launched a full SaaS platform in 2024 targeting **local Italian busine
 - Successfully delivered professional digital products to Italian SMBs
 - Gained end-to-end experience in product design, development, sales, and delivery
 
-</td></tr>
-</table>
-
 ---
 
 ### 7. 🎯 Casino & Sportsbook Mathematical Edge Systems
-
-<table>
-<tr><td>
 
 #### Research Areas
 
@@ -663,15 +625,9 @@ The **payout multiplier is fixed** regardless of how mispriced the correlation i
 - Correlation analysis between dependent events
 - Kelly Criterion-based position sizing
 
-</td></tr>
-</table>
-
 ---
 
 ### 8. 📊 NinjaTrader Professional Indicators with Live HTTP Data
-
-<table>
-<tr><td>
 
 #### Project
 Built custom professional-grade indicators for the **NinjaTrader** trading platform that pull live data from external web sources via HTTP requests and display it with a polished UI.
@@ -710,15 +666,9 @@ External Web Source (API / Website)
 - Custom rendering and UI design within trading platforms
 - Real-time data synchronization
 
-</td></tr>
-</table>
-
 ---
 
 ### 9. 🔗 Reth Private Node — Base Network Infrastructure
-
-<table>
-<tr><td>
 
 #### Project
 Deployed a local private node on the **Base blockchain network** using **Reth** (Rust Ethereum execution client) for low-latency, private access to blockchain state and mempool data.
@@ -737,15 +687,9 @@ Deployed a local private node on the **Base blockchain network** using **Reth** 
 - Network infrastructure management
 - Understanding of Ethereum execution layer internals (EVM, state tries, mempool)
 
-</td></tr>
-</table>
-
 ---
 
 ### 10. 🎁 YouTube Giveaway Probability Optimization
-
-<table>
-<tr><td>
 
 #### Concept
 Reverse-engineered the mechanics of YouTube giveaways (specifically prop firm account giveaways) to create a systematic, repeatable edge that maximized the probability of winning.
@@ -760,15 +704,9 @@ Reverse-engineered the mechanics of YouTube giveaways (specifically prop firm ac
 - Achieved a significantly above-expected win rate across multiple giveaways
 - Demonstrated capacity for systematic analysis of seemingly random systems
 
-</td></tr>
-</table>
-
 ---
 
 ### 11. 💹 Polymarket Temporal Edge — Low-Price Share Strategy
-
-<table>
-<tr><td>
 
 #### Discovery
 Through systematic analysis, discovered a **temporary pricing inefficiency** on Polymarket: shares priced at very low values carried a positive expected value due to the asymmetric payoff structure.
@@ -790,15 +728,9 @@ Discovered reality:
 #### Key Insight
 The market was systematically underpricing tail-risk events, creating a repeatable long-shot strategy with positive expected value — a well-known phenomenon in prediction markets and sports betting ("favorite-longshot bias").
 
-</td></tr>
-</table>
-
 ---
 
 ### 12. 🔓 Platform Reverse Engineering & Access Research
-
-<table>
-<tr><td>
 
 #### Scope
 Conducted security research and reverse engineering on multiple web platforms, analyzing paywall mechanisms, authentication flows, and premium feature gating.
@@ -814,9 +746,6 @@ Conducted security research and reverse engineering on multiple web platforms, a
 - Browser DevTools proficiency (Network, Console, Application tabs)
 - API reverse engineering
 - Understanding of client-server architecture vulnerabilities
-
-</td></tr>
-</table>
 
 ---
 
@@ -857,9 +786,6 @@ Conducted security research and reverse engineering on multiple web platforms, a
 
 ## 🧠 AI & Prompt Engineering Mastery
 
-<table>
-<tr><td>
-
 ### Experience Timeline
 - **2022 → Present** — Daily, intensive use of AI/LLMs for all software development, research, and system design
 - **3+ years** of continuous, hands-on prompt engineering across every major model family
@@ -896,15 +822,9 @@ Every single project in this portfolio was designed, engineered, debugged, and s
 ### Key Differentiator
 > I don't just prompt AI — I **architect systems through AI**. I understand how to decompose complex engineering problems into AI-solvable sub-tasks, validate outputs, handle edge cases, and iterate until production-quality code is achieved. This makes me exceptionally effective at AI training, evaluation, and RLHF work because I understand both sides: **how AI thinks and how to make it think better.**
 
-</td></tr>
-</table>
-
 ---
 
 ## 🔺 Asymmetric Risk Framework — Universal Edge Detection
-
-<table>
-<tr><td>
 
 ### Philosophy
 I've developed a **universal mental model** for evaluating any opportunity — online or offline — through the lens of asymmetric risk. Every single opportunity is filtered through the same rigorous mathematical framework:
@@ -990,15 +910,9 @@ This probabilistic thinking translates directly to AI model evaluation:
 - Quality annotation demands **consistent judgment** under ambiguity — the same skill used in trading under uncertainty
 - The 5-Law framework demonstrates **structured analytical thinking** — the exact skill needed for high-quality AI training data
 
-</td></tr>
-</table>
-
 ---
 
 ## 🔬 Research & Pattern Recognition Methodology
-
-<table>
-<tr><td>
 
 ### Research Expertise
 - **Academic Paper Analysis** — Skilled at reading, interpreting, and extracting actionable insights from research papers across finance, CS, and ML
@@ -1019,9 +933,6 @@ Years of trial and error across quantitative trading, blockchain, casino math, a
 - Can rapidly evaluate whether a new opportunity has a genuine mathematical edge or is noise
 - Trained on hundreds of real-world experiments with real capital at stake
 - Build a hypothesis → test → measure → iterate cycle that closely mirrors the scientific method
-
-</td></tr>
-</table>
 
 ---
 
@@ -1073,9 +984,6 @@ Years of trial and error across quantitative trading, blockchain, casino math, a
 
 ## 👔 Professional Experience
 
-<table>
-<tr><td>
-
 ### AI-Assisted Development Engineer *(Self-Directed, 2022–Present)*
 - Designed, built, and shipped **12+ production-quality projects** across trading, blockchain, SaaS, and infrastructure
 - Awarded **$10,000 in AWS credits** for Protocol Titan's infrastructure innovation
@@ -1092,15 +1000,9 @@ Years of trial and error across quantitative trading, blockchain, casino math, a
 - **UHRS (Clickworker)** — Early AI training and data annotation work
 - **Freelance Development** — Custom software solutions for clients
 
-</td></tr>
-</table>
-
 ---
 
 ## 📚 Education & Continuous Learning
-
-<table>
-<tr><td>
 
 ### Self-Directed Technical Education
 - **3+ years** of intensive, daily AI/ML engineering practice
@@ -1117,9 +1019,6 @@ My education is **project-driven**: every concept I learn is immediately applied
 - Advanced prompt engineering techniques
 - MEV and blockchain consensus mechanisms
 - High-frequency trading infrastructure
-
-</td></tr>
-</table>
 
 ---
 
