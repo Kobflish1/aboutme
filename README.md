@@ -205,19 +205,25 @@ Reverse-engineered the **MyFundedFutures (MFF) 50K Rapid Plan** to discover that
 
 The Max Drawdown ($2,000) is **larger** than the daily profit needed ($1,500). This creates a per-day R:R that is automatically favorable:
 
-$$R:R = \frac{\text{Daily Target}}{\text{Max Drawdown}} = \frac{\$1{,}500}{\$2{,}000} = 0.75$$
+```math
+R:R = \frac{\text{Daily Target}}{\text{Max Drawdown}} = \frac{\$1{,}500}{\$2{,}000} = 0.75
+```
 
 **Step 2 — Breakeven Win Rate (No Edge / Pure Gambling)**
 
 At R:R = 0.75, a strategy with **zero edge** (completely random trades) has a per-day win probability of:
 
-$$W\%_{\text{day}} = \frac{\text{Risk}}{\text{Risk} + \text{Reward}} = \frac{\$2{,}000}{\$2{,}000 + \$1{,}500} = \frac{2{,}000}{3{,}500} = 57.14\%$$
+```math
+W\%_{\text{day}} = \frac{\text{Risk}}{\text{Risk} + \text{Reward}} = \frac{\$2{,}000}{\$2{,}000 + \$1{,}500} = \frac{2{,}000}{3{,}500} = 57.14\%
+```
 
 **Step 3 — Probability of Passing Evaluation (No Edge)**
 
 Passing requires winning on **both** days. With zero trading edge:
 
-$$P(\text{Pass Eval}) = P(\text{Win Day 1}) \times P(\text{Win Day 2}) = 0.5714 \times 0.5714 = \mathbf{32.65\%}$$
+```math
+P(\text{Pass Eval}) = P(\text{Win Day 1}) \times P(\text{Win Day 2}) = 0.5714 \times 0.5714 = \mathbf{32.65\%}
+```
 
 > **With absolutely no trading edge — pure gambling — 1 in 3 evaluations will pass.** This is the baseline. The prop firm thinks their rules protect them. They don't.
 
@@ -225,7 +231,9 @@ $$P(\text{Pass Eval}) = P(\text{Win Day 1}) \times P(\text{Win Day 2}) = 0.5714 
 
 The 30-minute ORB strategy (see Project #2) provides a real, consistent momentum edge. Running a **Monte Carlo simulation with 500,000 random trials** using the ORB backtest results (including partial wins and partial losses):
 
-$$P(\text{Pass Eval with ORB}) = \mathbf{37.26\%}$$
+```math
+P(\text{Pass Eval with ORB}) = \mathbf{37.26\%}
+```
 
 | Scenario | Phase 1 Pass Rate |
 |----------|-------------------|
@@ -239,7 +247,9 @@ $$P(\text{Pass Eval with ORB}) = \mathbf{37.26\%}$$
 
 Accounts that pass Phase 1 enter Phase 2 with stricter intraday drawdown rules. Using the same Monte Carlo methodology with the 30-minute ORB:
 
-$$P(\text{Pass Phase 2 → Phase 3}) = \mathbf{33.60\%}$$
+```math
+P(\text{Pass Phase 2 → Phase 3}) = \mathbf{33.60\%}
+```
 
 ---
 
@@ -267,8 +277,12 @@ This is where revenue is generated. The optimal R-multiple that maximizes Expect
 
 **Average revenue per account reaching Phase 3:**
 
-$$\text{Avg Revenue}_{P3} = \mathbf{\$3{,}193.80}$$
-$$\text{Avg Account Lifespan} = \mathbf{2.78 \text{ trades}}$$
+```math
+\text{Avg Revenue}_{P3} = \mathbf{\$3{,}193.80}
+```
+```math
+\text{Avg Account Lifespan} = \mathbf{2.78 \text{ trades}}
+```
 
 ---
 
@@ -276,25 +290,37 @@ $$\text{Avg Account Lifespan} = \mathbf{2.78 \text{ trades}}$$
 
 **Probability of at least 1 withdrawal from a fresh evaluation:**
 
-$$P(\text{Payout}) = P(\text{Phase 1}) \times P(\text{Phase 2}) \times P(\text{Phase 3 Withdrawal})$$
+```math
+P(\text{Payout}) = P(\text{Phase 1}) \times P(\text{Phase 2}) \times P(\text{Phase 3 Withdrawal})
+```
 
-$$P(\text{Payout}) = 0.3726 \times 0.3360 \times 0.5559 = \mathbf{6.96\%}$$
+```math
+P(\text{Payout}) = 0.3726 \times 0.3360 \times 0.5559 = \mathbf{6.96\%}
+```
 
 > **1 in every 14.3 evaluation accounts will generate at least one $500+ withdrawal.** This is the hit rate.
 
 **Probability of reaching Phase 3 (funded):**
 
-$$P(\text{Funded}) = 0.3726 \times 0.3360 = \mathbf{12.52\%}$$
+```math
+P(\text{Funded}) = 0.3726 \times 0.3360 = \mathbf{12.52\%}
+```
 
 **Gross Expected Value per Evaluation:**
 
-$$EV_{\text{gross}} = P(\text{Funded}) \times \text{Avg Revenue}_{P3} = 0.1252 \times \$3{,}193.80 = \mathbf{\$399.86}$$
+```math
+EV_{\text{gross}} = P(\text{Funded}) \times \text{Avg Revenue}_{P3} = 0.1252 \times \$3{,}193.80 = \mathbf{\$399.86}
+```
 
 **Net Expected Value per Evaluation (after eval fee):**
 
-$$EV_{\text{net}} = \$399.86 - \$119 = \mathbf{+\$280.86 \text{ per account}}$$
+```math
+EV_{\text{net}} = \$399.86 - \$119 = \mathbf{+\$280.86 \text{ per account}}
+```
 
-$$\text{ROI per eval} = \frac{\$280.86}{\$119} = \mathbf{+236\%}$$
+```math
+\text{ROI per eval} = \frac{\$280.86}{\$119} = \mathbf{+236\%}
+```
 
 ---
 
@@ -359,11 +385,15 @@ Built an automated arbitrage bot for Polymarket (blockchain-based prediction mar
 
 In a binary prediction market, a YES share and a NO share must always sum to exactly $1.00 at settlement (one pays $1, the other pays $0). When the market is inefficient:
 
-$$P_{\text{YES}} + P_{\text{NO}} < \$1.00$$
+```math
+P_{\text{YES}} + P_{\text{NO}} < \$1.00
+```
 
 **The arbitrage is risk-free:**
 
-$$\text{Profit} = \$1.00 - (P_{\text{YES}} + P_{\text{NO}}) - \text{Fees}$$
+```math
+\text{Profit} = \$1.00 - (P_{\text{YES}} + P_{\text{NO}}) - \text{Fees}
+```
 
 **Example:**
 
@@ -374,7 +404,9 @@ $$\text{Profit} = \$1.00 - (P_{\text{YES}} + P_{\text{NO}}) - \text{Fees}$$
 | **Total Cost** | **$0.95** | **$1.00 guaranteed** |
 | **Risk-Free Profit** | | **$0.05 per share pair (5.26% return)** |
 
-$$\text{Return} = \frac{\$1.00 - \$0.95}{\$0.95} = 5.26\%$$
+```math
+\text{Return} = \frac{\$1.00 - \$0.95}{\$0.95} = 5.26\%
+```
 
 By buying **both** YES and NO simultaneously when their combined price is below $1.00, one of them is guaranteed to pay out $1.00 — netting the difference as risk-free profit.
 
@@ -461,7 +493,9 @@ Token Graph (DEX liquidity pools):
 
 **Combined with CPU AVX-512 SIMD vectorization** for parallel price calculations across multiple paths simultaneously:
 
-$$\text{Speedup} = \frac{T_{\text{baseline}}}{T_{\text{RICH}}} = 32.69\times$$
+```math
+\text{Speedup} = \frac{T_{\text{baseline}}}{T_{\text{RICH}}} = 32.69\times
+```
 
 #### Architecture
 | Component | Details |
@@ -533,7 +567,9 @@ Built and launched a full SaaS platform in 2024 targeting **local Italian busine
 
 Casino bonuses have **wagering requirements** (WR). The house sets them to "feel hard" — **but they don't run the math.** Just like prop firms, the edge is hidden in the rules:
 
-$$EV_{\text{bonus}} = \text{Bonus} - (\text{Total Wagered} \times \text{House Edge})$$
+```math
+EV_{\text{bonus}} = \text{Bonus} - (\text{Total Wagered} \times \text{House Edge})
+```
 
 **Example: $100 bonus, 30× wagering requirement, 97% RTP slot (3% house edge):**
 
@@ -547,9 +583,13 @@ $$EV_{\text{bonus}} = \text{Bonus} - (\text{Total Wagered} \times \text{House Ed
 
 The **universal rule** for when a bonus is +EV:
 
-$$\text{WR} < \frac{1}{\text{House Edge}}$$
+```math
+\text{WR} < \frac{1}{\text{House Edge}}
+```
 
-$$\text{WR} < \frac{1}{0.03} = 33.3\times$$
+```math
+\text{WR} < \frac{1}{0.03} = 33.3\times
+```
 
 > **Any bonus with a wagering requirement below $\frac{1}{\text{House Edge}}$ is mathematically profitable.** On a 97% RTP slot, any WR below 33.3× creates positive expected value. The casino sets WR to "look difficult" — not to be mathematically optimal against an informed player.
 
@@ -561,15 +601,21 @@ $$\text{WR} < \frac{1}{0.03} = 33.3\times$$
 
 Bookmakers price Build-a-Bet (Same Game Parlay) legs as **independent events**, but many legs within the same game are **correlated**:
 
-$$P_{\text{bookmaker}}(A \cap B) = P(A) \times P(B) \quad \text{(assumes independence)}$$
+```math
+P_{\text{bookmaker}}(A \cap B) = P(A) \times P(B) \quad \text{(assumes independence)}
+```
 
 But in reality, player stats and game outcomes are correlated. When a player scores more, their team is more likely to win. The **true** probability is:
 
-$$P_{\text{true}}(A \cap B) = P(A) \times P(B|A)$$
+```math
+P_{\text{true}}(A \cap B) = P(A) \times P(B|A)
+```
 
 When events are **positively correlated**, $P(B|A) > P(B)$, so:
 
-$$P_{\text{true}}(A \cap B) > P_{\text{bookmaker}}(A \cap B)$$
+```math
+P_{\text{true}}(A \cap B) > P_{\text{bookmaker}}(A \cap B)
+```
 
 **This underprices correlated parlays.** The bookmaker's payout multiplier is FIXED regardless of how mispriced the legs are.
 
@@ -585,13 +631,19 @@ $$P_{\text{true}}(A \cap B) > P_{\text{bookmaker}}(A \cap B)$$
 
 Breakeven for a 2-leg at 3× payout:
 
-$$W\%_{\text{breakeven}} = \frac{1}{\text{Payout}} = \frac{1}{3} = 33.3\%$$
+```math
+W\%_{\text{breakeven}} = \frac{1}{\text{Payout}} = \frac{1}{3} = 33.3\%
+```
 
 The bookmaker prices the parlay at 33.0% (near breakeven). But the **true correlated probability is 40.7%** — a massive gap:
 
-$$EV = (0.407 \times \$60) - (0.593 \times \$20) = \$24.42 - \$11.86 = \mathbf{+\$12.56 \text{ per \$20 entry}}$$
+```math
+EV = (0.407 \times \$60) - (0.593 \times \$20) = \$24.42 - \$11.86 = \mathbf{+\$12.56 \text{ per \$20 entry}}
+```
 
-$$\text{ROI} = \frac{\$12.56}{\$20} = \mathbf{+62.8\%}$$
+```math
+\text{ROI} = \frac{\$12.56}{\$20} = \mathbf{+62.8\%}
+```
 
 The **payout multiplier is fixed** regardless of how mispriced the correlation is — this is the exact same structural flaw as prop firm rules: the house prices for optics, not mathematical optimality.
 
@@ -859,7 +911,9 @@ I've developed a **universal mental model** for evaluating any opportunity — o
 
 #### The Core Equation
 
-$$EV = (W\% \times \text{Avg Win}) - ((1 - W\%) \times \text{Avg Loss})$$
+```math
+EV = (W\% \times \text{Avg Win}) - ((1 - W\%) \times \text{Avg Loss})
+```
 
 Where:
 - $W\%$ = Win Rate (probability of success)
@@ -870,7 +924,9 @@ Where:
 
 For any given R:R, the minimum win rate needed to break even:
 
-$$W\%_{\text{breakeven}} = \frac{1}{1 + R:R}$$
+```math
+W\%_{\text{breakeven}} = \frac{1}{1 + R:R}
+```
 
 | R:R | Breakeven WR | Meaning |
 |-----|-------------|----------|
